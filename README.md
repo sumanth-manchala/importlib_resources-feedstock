@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Backport of Python 3.7's standard library `importlib.resources`.
+Summary: Backport of Python 3.7's standard library `importlib.resources`
 
 
 
