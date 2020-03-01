@@ -16,14 +16,18 @@ requirements:
   host:
     - python
     - pip
-    - pathlib2  # [py27]
-    - typing  # [py<35]
   run:
     - python
     - pathlib2  # [py27]
     - typing  # [py<35]
+    - zipp >=0.4  # [py<38]
+    - singledispatch  # [py<34]
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - importlib_resources
 
@@ -31,7 +35,7 @@ about:
   home: http://importlib-resources.readthedocs.io
   license: Apache-2.0
   license_file: LICENSE
-  summary: Backport of Python 3.7's standard library `importlib.resources`.
+  summary: Backport of Python 3.7's standard library `importlib.resources`
 
 extra:
   recipe-maintainers:
