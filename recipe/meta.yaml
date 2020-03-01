@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
   name: importlib_resources
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/importlib_resources/importlib_resources-{{ version }}.tar.gz
-  sha256: d3279fd0f6f847cced9f7acc19bd3e5df54d34f93a2e7bb5f238f81545787078
+  sha256: 44bbe129a4ff27fcc0bae81f10f411bb011015b9afb1f0dde6234724d96966ae
 
 build:
-  number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -31,7 +31,7 @@ about:
   home: http://importlib-resources.readthedocs.io
   license: Apache-2.0
   license_file: LICENSE
-  summary: "Backport of Python 3.7's standard library `importlib.resources`."
+  summary: Backport of Python 3.7's standard library `importlib.resources`.
 
 extra:
   recipe-maintainers:
