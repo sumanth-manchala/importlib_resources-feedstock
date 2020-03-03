@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: importlib_resources
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/importlib_resources/importlib_resources-{{ version }}.tar.gz
-  sha256: 44bbe129a4ff27fcc0bae81f10f411bb011015b9afb1f0dde6234724d96966ae
+  sha256: ce84b1c9c05078e1797700505bd1bc386cee9561002a9bdcfcba634adc6333e5
 
 build:
   number: 0
@@ -16,12 +16,16 @@ requirements:
   host:
     - python
     - pip
+    - setuptools_scm >=3.4.1
+    # setuptools_scm[toml]
+    - toml
   run:
     - python
     - pathlib2  # [py27]
     - typing  # [py<35]
     - zipp >=0.4  # [py<38]
     - singledispatch  # [py<34]
+    - importlib_metadata  # [py<38]
 
 test:
   requires:
