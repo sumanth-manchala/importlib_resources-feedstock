@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: importlib_resources
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/importlib_resources/importlib_resources-{{ version }}.tar.gz
-  sha256: 6f87df66833e1942667108628ec48900e02a4ab4ad850e25fbf07cb17cf734ca
+  sha256: 7f6aae2ed252ba10f5d1af5676b0e35f3b3eb7d3cc103b8365cc92aec0c79258
 
 build:
   number: 0
