@@ -10,25 +10,19 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm >=3.4.1
     # setuptools_scm[toml]
     - toml
   run:
-    - python
-    - pathlib2  # [py27]
-    - typing  # [py<35]
-    - zipp >=0.4  # [py<38]
-    - singledispatch  # [py<34]
-    - importlib_metadata  # [py<38]
+    - python >=3.6
+    - zipp >=3.1.0
 
 test:
   requires:
