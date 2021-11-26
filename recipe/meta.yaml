@@ -1,4 +1,4 @@
-{% set name = "importlib-resources" %}
+{% set name = "importlib_resources" %}
 {% set version = "3.3.1" %}
 
 
@@ -11,7 +11,7 @@ source:
   sha256: 0ed250dbd291947d1a298e89f39afcc477d5a6624770503034b72588601bcc05
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
