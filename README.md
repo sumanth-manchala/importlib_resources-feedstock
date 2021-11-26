@@ -1,4 +1,4 @@
-About importlib_resources
+About importlib-resources
 =========================
 
 Home: http://importlib-resources.readthedocs.io
@@ -27,35 +27,36 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-importlib_resources-green.svg)](https://anaconda.org/conda-forge/importlib_resources) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/importlib_resources.svg)](https://anaconda.org/conda-forge/importlib_resources) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/importlib_resources.svg)](https://anaconda.org/conda-forge/importlib_resources) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/importlib_resources.svg)](https://anaconda.org/conda-forge/importlib_resources) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-importlib--resources-green.svg)](https://anaconda.org/conda-forge/importlib-resources) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/importlib-resources.svg)](https://anaconda.org/conda-forge/importlib-resources) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/importlib-resources.svg)](https://anaconda.org/conda-forge/importlib-resources) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/importlib-resources.svg)](https://anaconda.org/conda-forge/importlib-resources) |
 
-Installing importlib_resources
+Installing importlib-resources
 ==============================
 
-Installing `importlib_resources` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `importlib-resources` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `importlib_resources` can be installed with:
+Once the `conda-forge` channel has been enabled, `importlib-resources` can be installed with:
 
 ```
-conda install importlib_resources
+conda install importlib-resources
 ```
 
-It is possible to list all of the versions of `importlib_resources` available on your platform with:
+It is possible to list all of the versions of `importlib-resources` available on your platform with:
 
 ```
-conda search importlib_resources --channel conda-forge
+conda search importlib-resources --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -90,17 +91,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating importlib_resources-feedstock
+Updating importlib-resources-feedstock
 ======================================
 
-If you would like to improve the importlib_resources recipe or build a new
+If you would like to improve the importlib-resources recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/importlib_resources-feedstock are
+Note that all branches in the conda-forge/importlib-resources-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
