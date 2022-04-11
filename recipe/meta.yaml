@@ -9,7 +9,7 @@ source:
   sha256: 1b93238cbf23b4cde34240dd8321d99e9bf2eb4bc91c0c99b2886283e7baad85
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -17,20 +17,50 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools_scm >=3.4.1
-    # setuptools_scm[toml]
-    - toml
   run:
     - python >=3.6
-    - zipp >=3.1.0
 
-test:
-  requires:
-    - pip
-  commands:
-    - pip check
-  imports:
-    - importlib_resources
+outputs:
+  - name: importlib_resources
+    build:
+      noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+        - setuptools_scm >=3.4.1
+        # setuptools_scm[toml]
+        - toml
+      run:
+        - python >=3.6
+        - zipp >=3.1.0
+      run_constrained:
+        - {{ pin_subpackage("importlib-resources", max_pin="x.x.x") }}
+    test:
+      requires:
+        - pip
+      commands:
+        - pip check
+      imports:
+        - importlib_resources
+
+  - name: importlib-resources
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.6
+      run:
+        - {{ pin_subpackage("importlib_resources", max_pin="x.x.x") }}
+        - python >=3.6
+    test:
+      requires:
+        - pip
+      commands:
+        - pip check
+      imports:
+        - importlib_resources
 
 about:
   home: http://importlib-resources.readthedocs.io
@@ -39,5 +69,6 @@ about:
   summary: Backport of Python 3.7's standard library `importlib.resources`
 
 extra:
+  feedstock-name: importlib_resources
   recipe-maintainers:
     - ocefpaf
