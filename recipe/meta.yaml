@@ -9,7 +9,7 @@ source:
   sha256: b6062987dfc51f0fcb809187cffbd60f35df7acb4589091f154214af6d0d49d3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -17,34 +17,25 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools_scm >=3.4.1
+    # setuptools_scm[toml]
+    - toml
   run:
     - python >=3.6
+    - zipp >=3.1.0
+  run_constrained:
+    - {{ pin_subpackage("importlib-resources", max_pin="x.x.x") }}
+
+test:
+  requires:
+    - pip
+  commands:
+    - pip check
+  imports:
+    - importlib_resources
 
 outputs:
   - name: importlib_resources
-    build:
-      noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
-    requirements:
-      host:
-        - python >=3.6
-        - pip
-        - setuptools_scm >=3.4.1
-        # setuptools_scm[toml]
-        - toml
-      run:
-        - python >=3.6
-        - zipp >=3.1.0
-      run_constrained:
-        - {{ pin_subpackage("importlib-resources", max_pin="x.x.x") }}
-    test:
-      requires:
-        - pip
-      commands:
-        - pip check
-      imports:
-        - importlib_resources
-
   - name: importlib-resources
     build:
       noarch: python
