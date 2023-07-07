@@ -1,11 +1,11 @@
-About importlib_resources
-=========================
+About importlib_resources-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/importlib_resources-feedstock/blob/main/LICENSE.txt)
 
 Home: http://importlib-resources.readthedocs.io
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/importlib_resources-feedstock/blob/main/LICENSE.txt)
 
 Summary: Backport of Python 3.7's standard library `importlib.resources`
 
